@@ -21,6 +21,19 @@ This is a Serverless - Web application that serves as a Dashboard for servers an
   <li>HTML, CSS and Jinja2</li>
 </ul>
 
+# Installation Steps:
+<ul>
+  <li>1) Install Python3</li>
+  <li>2) Install Pip </li>
+    <ol>
+      <li> curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py </li>
+      <li> python get-pip.py </li>
+    </ol>
+  <li>Setup Virtual Environment</li>
+  <li>pip install -r requirements.txt</li>
+  <li>python app.py</li>
+</ul>
+
 
 ## Todo
 <ul>
