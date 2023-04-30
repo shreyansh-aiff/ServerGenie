@@ -1,108 +1,84 @@
 {% extends 'base.jinja2' %}
 {% block content %}
-
-<style>
-    .server-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    .input-field {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 16px;
-      width: 100%;
-    }
-
-    .form-input {
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      width: 100%;
-    }
-
-    .form-button {
-      display: inline-block;
-      padding: 8px 16px;
-      font-size: 14px;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-
-    .form-button:hover {
-      background-color: #3e8e41;
-    }
-</style>
-
-  <h1>Add your Server</h1>
+<section class="section">
+  <h1 class="title">Add your Server</h1>
 
   <form action="/post/createServer" method="post" class="server-form">
 
-    <div class="input-field">
-      <label for='server-id'>Server-Id:</label>
-      <input type="text" name="server-id" class="form-input" /> 
+    <div class="field">
+      <label class="label" for='server-id'>Server-Id:</label>
+      <div class="control">
+      	<input class="input" type="text" name="server-id" style="width: 33%;"/>
+      </div> 
     </div>
 
-    <div class="input-field">
-      <label for='server-name'>Server-Name:</label>
-      <input type="text" name="server-name" class="form-input" /> 
+    <div class="field">
+      <label class="label" for='server-name'>Server-Name:</label>
+	<div class="control">
+      		<input type="text" name="server-name" class="input" style="width: 33%;"/>
+	</div> 
     </div>
 
-    <div class="input-field">
-      <label for='cpu'>CPU:</label>
-      <input type="text" name="cpu" class="form-input" /> 
+    <div class="field">
+      <label class="label" for='cpu'>CPU:</label>
+      <div class="control">
+      	<input type="text" name="cpu" class="input" style="width: 33%;"/>
+      </div> 
     </div>
 
-    <div class="input-field">
-      <label for='diskspace'>Disk Space:</label>
-      <input type="text" name="diskspace" class="form-input" /> 
+    <div class="field">
+      <label class="label" for='diskspace'>Disk Space:</label>
+      <div class="control">
+      <input type="text" name="diskspace" class="input" style="width: 33%;"/>
+      </div> 
     </div>
 
-    <div class="input-field">
-      <label for='ip'>IP:</label>
-      <input type="text" name="ip" class="form-input" /> 
+    <div class="field">
+      <label class="label" for='ip'>IP:</label>
+      <div class="control">
+      <input type="text" name="ip" class="input" style="width: 33%;"/>
+      </div> 
     </div>
 
-    <div class="input-field">
-      <label for='location'>Location:</label>
-      <input type="text" name="location" class="form-input" /> 
+    <div class="field">
+      <label class="label" for='location'>Location:</label>
+      <div class="control">   
+      <input type="text" name="location" class="input" style="width: 33%;"/>
+      </div> 
     </div>
 
-    <div class="input-field">
-      <label for='os'>OS:</label>
-      <input type="text" name="os" class="form-input" /> 
+    <div class="field">
+      <label class="label" for='os'>OS:</label>
+      <div class="control">
+      <input type="text" name="os" class="input" style="width: 33%;"/>
+      </div>
     </div>
 
-    <div class="input-field">
-      <label for='ram'>RAM:</label>
-      <input type="text" name="ram" class="form-input" /> 
+    <div class="field">
+      <label class="label" for='ram'>RAM:</label>
+      <div class="control">
+      <input type="text" name="ram" class="input" style="width: 33%;"/>
+      </div> 
     </div>
 
-    <div class="input-field">
-      <label for='status'>Status Active:</label>
-      <input type="text" name="status" class="form-input" /> 
+    <div class="field">
+      <label class="label" for='status'>Status Active:</label>
+      <div class="control">
+      <input type="text" name="status" class="input" style="width: 33%;" />
+      </div> 
     </div>
 
-    <div class="input-field">
-      <label for='applications'>Applications:</label>
-      <input type="text" name="applications" class="form-input" value='0'/> 
+    <div class="field">
+      <label class="label" for='applications'>Applications:</label>
+      <div class="control">
+      <input type="text" name="applications" class="input" value='0' style="width: 33%;"/>
+      </div> 
     </div>
 
     <div class="button-container">
-      <input type="submit" class="form-button" />
+      <input type="submit" class="button is-outlined is-danger" />
     </div>
 
   </form>
-
+</section>
 {% endblock %}
