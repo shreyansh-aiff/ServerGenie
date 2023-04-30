@@ -48,14 +48,11 @@ def deleteApplication():
 
 @app.route('/post/getSpecificServerDetails', methods=["POST"])
 def getSpecificServerAPICall():
-    location = request.form.get('location')
-    osType = request.form.getlist('os-type')
-    print(location, osType)
-    # serverId = request.form.get('server-id')
-    # headers = {'Accept': 'application/json', 'x-api-key': API_KEY}
+    serverId = request.form.get('server-id')
+    headers = {'Accept': 'application/json', 'x-api-key': API_KEY}
     # print(serverId)
-    # response = requests.get(f"{baseUrl}/get-servers?id={serverId}", headers=headers).json()
-    # return render_template('specificServer.jinja2', data = response)
+    response = requests.get(f"{baseUrl}/get-servers?id={serverId}", headers=headers).json()
+    return render_template('specificServer.jinja2', item = response)
 
 @app.route('/post/addApplicationAPICall', methods=["POST"])
 def addApplicationAPICall():
