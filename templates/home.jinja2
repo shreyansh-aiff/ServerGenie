@@ -4,33 +4,6 @@
 
 <head>
   <style>
-    .button {
-      display: inline-block;
-      padding: 8px 16px;
-      font-size: 14px;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-
-    .button:hover {
-      background-color: #3e8e41;
-    }
-
-    .button-container {
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    .button-container a {
-      margin-right: 10px;
-    }
-
     table {
       border-collapse: collapse;
       width: 100%;
@@ -39,17 +12,14 @@
       text-align: left;
       padding: 8px;
     }
-    tr:nth-child(even){background-color: #f2f2f2}
-    th {
-      background-color: #4CAF50;
-      color: white;
+.button-container a {
+      margin-right: 10px;
     }
   </style>
 </head>
-
-<h3> Servers </h3>
-
-<table>
+<section class="section">
+<h1 class="title">Servers</h1>
+<table class="table is-hoverable">
   <thead>
     <tr>
       <th>S.No</th>
@@ -83,20 +53,19 @@
     {% endfor %}
   </tbody>
 </table>
-
 <br />
 
-<div class="button-container">
-  <a href="{{ url_for('addServer') }}" class="button"> Add Server </a>
-  <a href="{{ url_for('getSpecificServer') }}" class="button"> Get Specific Server </a>
-  <a href="{{ url_for('deleteServer') }}" class="button"> Delete Server </a>
+<div class="button-container columns is-centered">
+  <a href="{{ url_for('addServer') }}" class="button is-outlined is-success"> Add Server </a>
+  <a href="{{ url_for('getSpecificServer') }}" class="button is-outlined is-success"> Get Specific Server </a>
+  <a href="{{ url_for('deleteServer') }}" class="button is-outlined is-success"> Delete Server </a>
 </div>
-
+</section>
 <br />
 
-<h3> Applications </h3>
-
-<table>
+<section class="section">
+<h1 class="title"> Applications </h1>
+<table class="table is-hoverable">
   <thead>
     <tr>
       <th>S.No</th>
@@ -120,14 +89,13 @@
     {% endfor %}
   </tbody>
 </table>
-
 <br />
 
-<div class="button-container">
-  <a href="{{ url_for('addApplication') }}" class="button"> Add Application </a> <br />
-  <a href="{{ url_for('getSpecificApplication') }}" class="button"> Get Specific Application </a>
-  <a href="{{ url_for('deleteApplication') }}" class="button"> Delete Application </a>
+<div class="button-container columns is-centered">
+  <a href="{{ url_for('addApplication') }}" class="button is-outlined is-success"> Add Application </a> <br />
+  <a href="{{ url_for('getSpecificApplication') }}" class="button is-outlined is-success"> Get Specific Application </a>
+  <a href="{{ url_for('deleteApplication') }}" class="button is-outlined is-success"> Delete Application </a>
 </div>
-
+</section>
 
 {% endblock %}
